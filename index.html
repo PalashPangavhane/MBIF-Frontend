@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Bus Finance Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar-left">
+            <div class="sidebar-header">
+                <img src="magic-bus-logo.png" alt="Magic Bus" class="sidebar-logo">
+                <span class="sidebar-title">Finance AI</span>
+            </div>
+
+            <button class="new-chat-btn">
+                <span class="btn-icon">+</span>
+                New Chat
+            </button>
+
+            <div class="sidebar-section">
+                <div class="section-title">Recent Searches</div>
+                <ul class="history-list">
+                    <li class="history-item">
+                        <span class="history-icon">&#9672;</span>
+                        <span class="history-text">Budget variance Q3 2025</span>
+                    </li>
+                    <li class="history-item">
+                        <span class="history-icon">&#9672;</span>
+                        <span class="history-text">West Region expenses</span>
+                    </li>
+                    <li class="history-item">
+                        <span class="history-icon">&#9672;</span>
+                        <span class="history-text">Co Impact project status</span>
+                    </li>
+                    <li class="history-item">
+                        <span class="history-icon">&#9672;</span>
+                        <span class="history-text">Training cost analysis</span>
+                    </li>
+                    <li class="history-item">
+                        <span class="history-icon">&#9672;</span>
+                        <span class="history-text">Funder allocation report</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="section-title">Recent DB Updates</div>
+                <ul class="updates-list">
+                    <li class="update-item">
+                        <span class="update-badge">NEW</span>
+                        <span class="update-text">JV Posted - PR2366</span>
+                        <span class="update-time">2m ago</span>
+                    </li>
+                    <li class="update-item">
+                        <span class="update-badge edit">EDIT</span>
+                        <span class="update-text">Budget revised - WR</span>
+                        <span class="update-time">15m ago</span>
+                    </li>
+                    <li class="update-item">
+                        <span class="update-badge">NEW</span>
+                        <span class="update-text">PO Created - Training</span>
+                        <span class="update-time">1h ago</span>
+                    </li>
+                    <li class="update-item">
+                        <span class="update-badge edit">EDIT</span>
+                        <span class="update-text">Expense approved</span>
+                        <span class="update-time">2h ago</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">JR</div>
+                    <div class="user-details">
+                        <span class="user-name">Jayant Rastogi</span>
+                        <span class="user-role">Chief Executive Officer</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="top-bar-left">
+                    <span class="app-name">Magic Bus Finance Intelligence</span>
+                </div>
+                <div class="top-bar-right">
+                    <span class="fiscal-year">FY 2025-26</span>
+                    <span class="current-date" id="current-date"></span>
+                </div>
+            </header>
+
+            <!-- Chat Area -->
+            <div class="chat-area" id="chat-area">
+                <!-- Welcome Screen (shown initially) -->
+                <div class="welcome-screen" id="welcome-screen">
+                    <div class="welcome-content">
+                        <img src="magic-bus-logo.png" alt="Magic Bus" class="welcome-logo">
+                        <h1 class="welcome-title">What can I help you with today?</h1>
+                        <p class="welcome-subtitle">Ask me anything about budgets, expenses, projects, or financial reports</p>
+
+                        <div class="suggestion-chips">
+                            <button class="chip" data-query="Show me the budget vs actual for this quarter">Budget vs Actual</button>
+                            <button class="chip" data-query="What are the top expenses this month?">Top Expenses</button>
+                            <button class="chip" data-query="Show project status for West Region">Project Status</button>
+                            <button class="chip" data-query="Generate funder allocation report">Funder Report</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Messages (shown after first message) -->
+                <div class="chat-messages" id="chat-messages" style="display: none;">
+                    <!-- Messages will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-container">
+                    <textarea
+                        class="chat-input"
+                        id="chat-input"
+                        placeholder="Ask about budgets, expenses, projects..."
+                        rows="1"
+                    ></textarea>
+                    <button class="send-btn" id="send-btn">
+                        <span>&#10148;</span>
+                    </button>
+                </div>
+                <p class="input-hint">Press Enter to send, Shift+Enter for new line</p>
+            </div>
+        </main>
+
+        <!-- Right Sidebar (Analytics Panel - hidden initially) -->
+        <aside class="sidebar-right" id="sidebar-right">
+            <div class="analytics-header">
+                <span class="analytics-title">Session Insights</span>
+                <button class="close-analytics" id="close-analytics">&times;</button>
+            </div>
+
+            <div class="analytics-content">
+                <!-- Session Summary -->
+                <div class="analytics-section">
+                    <div class="analytics-section-title">Session Summary</div>
+                    <div class="summary-card">
+                        <div class="summary-item">
+                            <span class="summary-label">Queries Made</span>
+                            <span class="summary-value" id="query-count">0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Data Points Accessed</span>
+                            <span class="summary-value" id="data-points">0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Reports Generated</span>
+                            <span class="summary-value" id="reports-count">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Figures -->
+                <div class="analytics-section">
+                    <div class="analytics-section-title">Key Figures</div>
+                    <div class="key-figures">
+                        <div class="figure-card">
+                            <span class="figure-label">Total Budget</span>
+                            <span class="figure-value">₹24.5 Cr</span>
+                            <span class="figure-change positive">+12.5%</span>
+                        </div>
+                        <div class="figure-card">
+                            <span class="figure-label">Actual Spent</span>
+                            <span class="figure-value">₹18.9 Cr</span>
+                            <span class="figure-change">77.3% utilized</span>
+                        </div>
+                        <div class="figure-card">
+                            <span class="figure-label">Variance</span>
+                            <span class="figure-value">₹5.5 Cr</span>
+                            <span class="figure-change positive">Under budget</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bar Charts Grid -->
+                <div class="charts-grid">
+                    <!-- Regional Distribution -->
+                    <div class="analytics-section">
+                        <div class="analytics-section-title">Regional Distribution</div>
+                        <div class="mini-chart">
+                            <div class="chart-bar">
+                                <span class="chart-label">West Region</span>
+                                <div class="chart-bar-container">
+                                    <div class="chart-bar-fill" style="width: 35%"></div>
+                                </div>
+                                <span class="chart-value">35%</span>
+                            </div>
+                            <div class="chart-bar">
+                                <span class="chart-label">North Region</span>
+                                <div class="chart-bar-container">
+                                    <div class="chart-bar-fill" style="width: 28%"></div>
+                                </div>
+                                <span class="chart-value">28%</span>
+                            </div>
+                            <div class="chart-bar">
+                                <span class="chart-label">South Region</span>
+                                <div class="chart-bar-container">
+                                    <div class="chart-bar-fill" style="width: 22%"></div>
+                                </div>
+                                <span class="chart-value">22%</span>
+                            </div>
+                            <div class="chart-bar">
+                                <span class="chart-label">Head Office</span>
+                                <div class="chart-bar-container">
+                                    <div class="chart-bar-fill" style="width: 15%"></div>
+                                </div>
+                                <span class="chart-value">15%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Expense Breakdown -->
+                    <div class="analytics-section">
+                        <div class="analytics-section-title">Expense Categories</div>
+                        <div class="mini-chart">
+                            <div class="chart-bar">
+                                <span class="chart-label">Salary</span>
+                                <div class="chart-bar-container">
+                                    <div class="chart-bar-fill salary" style="width: 45%"></div>
+                                </div>
+                                <span class="chart-value">45%</span>
+                            </div>
+                            <div class="chart-bar">
+                                <span class="chart-label">Training</span>
+                                <div class="chart-bar-container">
+                                    <div class="chart-bar-fill training" style="width: 22%"></div>
+                                </div>
+                                <span class="chart-value">22%</span>
+                            </div>
+                            <div class="chart-bar">
+                                <span class="chart-label">Events</span>
+                                <div class="chart-bar-container">
+                                    <div class="chart-bar-fill events" style="width: 18%"></div>
+                                </div>
+                                <span class="chart-value">18%</span>
+                            </div>
+                            <div class="chart-bar">
+                                <span class="chart-label">Admin</span>
+                                <div class="chart-bar-container">
+                                    <div class="chart-bar-fill admin" style="width: 15%"></div>
+                                </div>
+                                <span class="chart-value">15%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
