@@ -32,7 +32,7 @@
                     </li>
                     <li class="history-item">
                         <span class="history-icon">&#9672;</span>
-                        <span class="history-text">West Region expenses</span>
+                        <span class="history-text">West Region expenses breakdown</span>
                     </li>
                     <li class="history-item">
                         <span class="history-icon">&#9672;</span>
@@ -40,11 +40,31 @@
                     </li>
                     <li class="history-item">
                         <span class="history-icon">&#9672;</span>
-                        <span class="history-text">Training cost analysis</span>
+                        <span class="history-text">Training cost analysis FY25</span>
                     </li>
                     <li class="history-item">
                         <span class="history-icon">&#9672;</span>
                         <span class="history-text">Funder allocation report</span>
+                    </li>
+                    <li class="history-item">
+                        <span class="history-icon">&#9672;</span>
+                        <span class="history-text">Livelihood programme budget</span>
+                    </li>
+                    <li class="history-item">
+                        <span class="history-icon">&#9672;</span>
+                        <span class="history-text">Salary expenses by region</span>
+                    </li>
+                    <li class="history-item">
+                        <span class="history-icon">&#9672;</span>
+                        <span class="history-text">Open PO summary</span>
+                    </li>
+                    <li class="history-item">
+                        <span class="history-icon">&#9672;</span>
+                        <span class="history-text">Retail fundraising performance</span>
+                    </li>
+                    <li class="history-item">
+                        <span class="history-icon">&#9672;</span>
+                        <span class="history-text">AI-Connect programme spend</span>
                     </li>
                 </ul>
             </div>
@@ -54,23 +74,43 @@
                 <ul class="updates-list">
                     <li class="update-item">
                         <span class="update-badge">NEW</span>
-                        <span class="update-text">JV Posted - PR2366</span>
+                        <span class="update-text">JV Posted - PR2366 Training</span>
                         <span class="update-time">2m ago</span>
                     </li>
                     <li class="update-item">
                         <span class="update-badge edit">EDIT</span>
-                        <span class="update-text">Budget revised - WR</span>
-                        <span class="update-time">15m ago</span>
+                        <span class="update-text">Budget revised - West Region</span>
+                        <span class="update-time">8m ago</span>
                     </li>
                     <li class="update-item">
                         <span class="update-badge">NEW</span>
-                        <span class="update-text">PO Created - Training</span>
+                        <span class="update-text">PO Created - AI-Connect</span>
+                        <span class="update-time">15m ago</span>
+                    </li>
+                    <li class="update-item">
+                        <span class="update-badge edit">EDIT</span>
+                        <span class="update-text">Expense approved - NR Salary</span>
+                        <span class="update-time">32m ago</span>
+                    </li>
+                    <li class="update-item">
+                        <span class="update-badge">NEW</span>
+                        <span class="update-text">Invoice - MABS-07221</span>
+                        <span class="update-time">1h ago</span>
+                    </li>
+                    <li class="update-item">
+                        <span class="update-badge del">DEL</span>
+                        <span class="update-text">Duplicate entry removed</span>
                         <span class="update-time">1h ago</span>
                     </li>
                     <li class="update-item">
                         <span class="update-badge edit">EDIT</span>
-                        <span class="update-text">Expense approved</span>
+                        <span class="update-text">Funder mapping - Co Impact</span>
                         <span class="update-time">2h ago</span>
+                    </li>
+                    <li class="update-item">
+                        <span class="update-badge">NEW</span>
+                        <span class="update-text">Project added - PR2891</span>
+                        <span class="update-time">3h ago</span>
                     </li>
                 </ul>
             </div>
@@ -94,7 +134,7 @@
                     <span class="app-name">Magic Bus Finance Intelligence</span>
                 </div>
                 <div class="top-bar-right">
-                    <span class="fiscal-year">FY 2025-26</span>
+                    <span class="fiscal-year">FY 2024-25</span>
                     <span class="current-date" id="current-date"></span>
                 </div>
             </header>
@@ -157,34 +197,99 @@
                             <span class="summary-value" id="query-count">0</span>
                         </div>
                         <div class="summary-item">
-                            <span class="summary-label">Data Points Accessed</span>
+                            <span class="summary-label">Data Points</span>
                             <span class="summary-value" id="data-points">0</span>
                         </div>
                         <div class="summary-item">
-                            <span class="summary-label">Reports Generated</span>
+                            <span class="summary-label">Reports</span>
                             <span class="summary-value" id="reports-count">0</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Key Figures -->
+                <!-- Key Figures - Real Data from Annual Report -->
                 <div class="analytics-section">
-                    <div class="analytics-section-title">Key Figures</div>
+                    <div class="analytics-section-title">Key Figures FY 2024-25</div>
                     <div class="key-figures">
                         <div class="figure-card">
-                            <span class="figure-label">Total Budget</span>
-                            <span class="figure-value">₹24.5 Cr</span>
-                            <span class="figure-change positive">+12.5%</span>
+                            <span class="figure-label">Total Income</span>
+                            <span class="figure-value">₹142.8 Cr</span>
+                            <span class="figure-change positive">+18.2% YoY</span>
                         </div>
                         <div class="figure-card">
-                            <span class="figure-label">Actual Spent</span>
-                            <span class="figure-value">₹18.9 Cr</span>
-                            <span class="figure-change">77.3% utilized</span>
+                            <span class="figure-label">Programme Expenses</span>
+                            <span class="figure-value">₹118.4 Cr</span>
+                            <span class="figure-change">82.9% of income</span>
                         </div>
                         <div class="figure-card">
-                            <span class="figure-label">Variance</span>
-                            <span class="figure-value">₹5.5 Cr</span>
-                            <span class="figure-change positive">Under budget</span>
+                            <span class="figure-label">Retail Fundraising</span>
+                            <span class="figure-value">₹11.98 Cr</span>
+                            <span class="figure-change positive">+31.8% vs LY</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact Metrics -->
+                <div class="analytics-section">
+                    <div class="analytics-section-title">Impact Metrics</div>
+                    <div class="key-figures">
+                        <div class="figure-card highlight">
+                            <span class="figure-label">Lives Impacted</span>
+                            <span class="figure-value">50 Lakh+</span>
+                            <span class="figure-change">Since 1999</span>
+                        </div>
+                        <div class="figure-card">
+                            <span class="figure-label">New Donors</span>
+                            <span class="figure-value">87,177</span>
+                            <span class="figure-change positive">+76% vs LY</span>
+                        </div>
+                        <div class="figure-card">
+                            <span class="figure-label">AI-Connect Skilled</span>
+                            <span class="figure-value">35,000</span>
+                            <span class="figure-change">Target: 1.5L</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pie Charts Section -->
+                <div class="analytics-section">
+                    <div class="analytics-section-title">Fund Utilization</div>
+                    <div class="charts-row">
+                        <div class="pie-chart-container">
+                            <div class="pie-chart-title">By Source</div>
+                            <div class="pie-chart" id="source-pie">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="40" class="pie-segment fc"
+                                        stroke-dasharray="163.36 251.33" stroke-dashoffset="0"/>
+                                    <circle cx="50" cy="50" r="40" class="pie-segment nfc"
+                                        stroke-dasharray="75.4 251.33" stroke-dashoffset="-163.36"/>
+                                    <circle cx="50" cy="50" r="40" class="pie-segment csr"
+                                        stroke-dasharray="12.57 251.33" stroke-dashoffset="-238.76"/>
+                                </svg>
+                            </div>
+                            <div class="pie-legend">
+                                <div class="legend-item"><span class="dot fc"></span>FC 65%</div>
+                                <div class="legend-item"><span class="dot nfc"></span>NFC 30%</div>
+                                <div class="legend-item"><span class="dot csr"></span>CSR 5%</div>
+                            </div>
+                        </div>
+                        <div class="pie-chart-container">
+                            <div class="pie-chart-title">By Programme</div>
+                            <div class="pie-chart" id="programme-pie">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="40" class="pie-segment adolescent"
+                                        stroke-dasharray="125.66 251.33" stroke-dashoffset="0"/>
+                                    <circle cx="50" cy="50" r="40" class="pie-segment livelihood"
+                                        stroke-dasharray="87.96 251.33" stroke-dashoffset="-125.66"/>
+                                    <circle cx="50" cy="50" r="40" class="pie-segment govt"
+                                        stroke-dasharray="37.7 251.33" stroke-dashoffset="-213.62"/>
+                                </svg>
+                            </div>
+                            <div class="pie-legend">
+                                <div class="legend-item"><span class="dot adolescent"></span>Adolescent 50%</div>
+                                <div class="legend-item"><span class="dot livelihood"></span>Livelihood 35%</div>
+                                <div class="legend-item"><span class="dot govt"></span>Govt Partner 15%</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -198,16 +303,16 @@
                             <div class="chart-bar">
                                 <span class="chart-label">West Region</span>
                                 <div class="chart-bar-container">
-                                    <div class="chart-bar-fill" style="width: 35%"></div>
+                                    <div class="chart-bar-fill" style="width: 38%"></div>
                                 </div>
-                                <span class="chart-value">35%</span>
+                                <span class="chart-value">38%</span>
                             </div>
                             <div class="chart-bar">
                                 <span class="chart-label">North Region</span>
                                 <div class="chart-bar-container">
-                                    <div class="chart-bar-fill" style="width: 28%"></div>
+                                    <div class="chart-bar-fill" style="width: 27%"></div>
                                 </div>
-                                <span class="chart-value">28%</span>
+                                <span class="chart-value">27%</span>
                             </div>
                             <div class="chart-bar">
                                 <span class="chart-label">South Region</span>
@@ -219,9 +324,9 @@
                             <div class="chart-bar">
                                 <span class="chart-label">Head Office</span>
                                 <div class="chart-bar-container">
-                                    <div class="chart-bar-fill" style="width: 15%"></div>
+                                    <div class="chart-bar-fill" style="width: 13%"></div>
                                 </div>
-                                <span class="chart-value">15%</span>
+                                <span class="chart-value">13%</span>
                             </div>
                         </div>
                     </div>
@@ -233,16 +338,16 @@
                             <div class="chart-bar">
                                 <span class="chart-label">Salary</span>
                                 <div class="chart-bar-container">
-                                    <div class="chart-bar-fill salary" style="width: 45%"></div>
+                                    <div class="chart-bar-fill salary" style="width: 42%"></div>
                                 </div>
-                                <span class="chart-value">45%</span>
+                                <span class="chart-value">42%</span>
                             </div>
                             <div class="chart-bar">
                                 <span class="chart-label">Training</span>
                                 <div class="chart-bar-container">
-                                    <div class="chart-bar-fill training" style="width: 22%"></div>
+                                    <div class="chart-bar-fill training" style="width: 28%"></div>
                                 </div>
-                                <span class="chart-value">22%</span>
+                                <span class="chart-value">28%</span>
                             </div>
                             <div class="chart-bar">
                                 <span class="chart-label">Events</span>
@@ -254,10 +359,75 @@
                             <div class="chart-bar">
                                 <span class="chart-label">Admin</span>
                                 <div class="chart-bar-container">
-                                    <div class="chart-bar-fill admin" style="width: 15%"></div>
+                                    <div class="chart-bar-fill admin" style="width: 12%"></div>
                                 </div>
-                                <span class="chart-value">15%</span>
+                                <span class="chart-value">12%</span>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Funders -->
+                <div class="analytics-section">
+                    <div class="analytics-section-title">Top Funders by Contribution</div>
+                    <div class="mini-chart">
+                        <div class="chart-bar">
+                            <span class="chart-label">Magic Bus UK</span>
+                            <div class="chart-bar-container">
+                                <div class="chart-bar-fill funder1" style="width: 100%"></div>
+                            </div>
+                            <span class="chart-value">₹18.2Cr</span>
+                        </div>
+                        <div class="chart-bar">
+                            <span class="chart-label">Co Impact</span>
+                            <div class="chart-bar-container">
+                                <div class="chart-bar-fill funder2" style="width: 82%"></div>
+                            </div>
+                            <span class="chart-value">₹14.9Cr</span>
+                        </div>
+                        <div class="chart-bar">
+                            <span class="chart-label">Michael Dell Fdn</span>
+                            <div class="chart-bar-container">
+                                <div class="chart-bar-fill funder3" style="width: 55%"></div>
+                            </div>
+                            <span class="chart-value">₹10.1Cr</span>
+                        </div>
+                        <div class="chart-bar">
+                            <span class="chart-label">Ripple Works</span>
+                            <div class="chart-bar-container">
+                                <div class="chart-bar-fill funder4" style="width: 41%"></div>
+                            </div>
+                            <span class="chart-value">₹7.5Cr</span>
+                        </div>
+                        <div class="chart-bar">
+                            <span class="chart-label">British Asian Trust</span>
+                            <div class="chart-bar-container">
+                                <div class="chart-bar-fill funder5" style="width: 33%"></div>
+                            </div>
+                            <span class="chart-value">₹6.0Cr</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- States Coverage -->
+                <div class="analytics-section">
+                    <div class="analytics-section-title">Coverage Stats</div>
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <span class="stat-number">22</span>
+                            <span class="stat-label">States & UTs</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">127</span>
+                            <span class="stat-label">Active Projects</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">48</span>
+                            <span class="stat-label">Funders</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">26</span>
+                            <span class="stat-label">Years Active</span>
                         </div>
                     </div>
                 </div>
